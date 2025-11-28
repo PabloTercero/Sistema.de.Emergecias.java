@@ -1,0 +1,5 @@
+LOG [2025-11-24T16:10:19.155716400]: ALERTA_GENERADA: Tipo=Incendio, Ubicacion=Parque, Datos_Usuario=Maria Garcia (600333444) - Info Médica: Diabético tipo 1
+LOG [2025-11-24T16:22:59.848066400]: ALERTA_GENERADA: Tipo=Incendio, Ubicacion=Parque, Datos_Usuario=Juan Perez (600111222) - Info Médica: Alergia a la penicilina
+LOG [2025-11-24T16:34:02.908018900]: ALERTA_GENERADA: Tipo=Incendio, Ubicacion=Parque, Datos_Usuario=Pablo Tercero (666666666) - Info Médica: Esta mas sano que un roble
+LOG [2025-11-24T16:41:10.174977800]: ALERTA_GENERADA: Tipo=Caída, Ubicacion=Casa, Datos_Usuario=Pablo Tercero (666666666) - Info Médica: Esta mas sano que un roble
+LOG [2025-11-27T12:45:01.056164300]: ALERTA_GENERADA: Tipo=Caída, Ubicacion=e, Datos_Usuario=Pablo Tercero (666666666) - Info Médica: Esta mas sano que un roble
