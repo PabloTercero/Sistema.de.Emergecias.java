@@ -3,10 +3,7 @@ package com.emergencias.model;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-/**
- * Clase que representa el evento de emergencia en si.
- * Tiene los datos de que paso, donde y quien.
- */
+
 public class EmergencyEvent {
     // formato para que la fecha salga bien
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
