@@ -35,3 +35,21 @@ public class AlertSender {
     }
 
 }
+
+// --- NUEVO: FUNCIONALIDAD PARA LEER EL LOG (historial de alertas) ---
+public void mostrarHistorial() {
+    System.out.println("\n--- Historial de Alertas ---");
+    try (BufferedReader br = new BufferedReader(new FileReader(LOG_FILE))) {
+        String linea;
+        boolean vacio = true;
+        while ((linea = br.readLine()) != null) {
+            System.out.println(linea);
+            vacio = false;
+        }
+        if (vacio) System.out.println("No hay alertas registradas aun.");
+
+    } catch (IOException e) {
+        System.out.println("No se pudo leer el historial (quizas no existe aun).");
+    }
+}
+}
