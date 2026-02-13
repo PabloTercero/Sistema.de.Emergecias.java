@@ -33,7 +33,7 @@ public class AlertSender {
         }
     }
 
-    // --- NUEVO: MÉTODO QUE TE FALTA ---
+
     public void mostrarHistorial() {
         System.out.println("\n--- Historial de Alertas ---");
         try (BufferedReader br = new BufferedReader(new FileReader(LOG_FILE))) {
@@ -49,4 +49,3 @@ public class AlertSender {
             System.out.println("No se pudo leer el historial (quizas no existe aun).");
         }
     }
-}
