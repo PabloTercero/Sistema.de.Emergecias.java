@@ -49,3 +49,4 @@ public class AlertSender {
             System.out.println("No se pudo leer el historial (quizas no existe aun).");
         }
     }
+}
