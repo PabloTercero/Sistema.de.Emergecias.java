@@ -1,0 +1,3 @@
+Ruta del Cares;Media;1.0;1
+Pico Mulhacén;Alta;5.0;1
+Sendero de los Sentidos;Baja;3.0;1
