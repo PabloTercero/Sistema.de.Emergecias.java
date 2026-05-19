@@ -49,18 +49,26 @@ public class EmergencyManager {
 
     private UserData cargarUsuario() throws IOException {
         String fichero = "user_data.txt";
-        Map<String, String> datos = new HashMap<>();
         try (BufferedReader br = new BufferedReader(new FileReader(fichero))) {
-            String linea;
-            while ((linea = br.readLine()) != null) {
-                if (linea.isEmpty() || linea.startsWith("#")) continue;
-                String[] partes = linea.split(":", 2);
-                if (partes.length == 2) {
-                    datos.put(partes[0].trim(), partes[1].trim());
+            String linea = br.readLine();
+            if (linea != null && !linea.isEmpty()) {
+                // Separamos por comas la primera línea del archivo
+                String[] partes = linea.split(",");
+                if (partes.length >= 4) {
+                    String nombre = partes[1].trim();
+                    String telefono = partes[2].trim();
+                    String infoMedica = partes[3].trim();
+                    return new UserData(nombre, telefono, infoMedica);
                 }
             }
+
+            // Si lee la línea pero no tiene las columnas suficientes, lanza la excepción aquí
+            throw new IOException("Formato de user_data.txt no válido.");
+
+        } catch (IOException e) {
+            // Si el archivo directamente no existe o falla el disco, lo lanzamos hacia arriba
+            throw new IOException("Error al acceder al archivo: " + e.getMessage());
         }
-        return new UserData(datos.get("nombre"), datos.get("telefono"), datos.get("infoMedica"));
     }
 
     private void cargarBasesDeDatos() {

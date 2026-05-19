@@ -4,3 +4,5 @@
 [ALERTA] 2025-11-30 13:35:51 | Tipo: Incendio | Lugar: Parque | Usuario: Pablo Tercero (666-777-888) - Info: Ninguna alergia
 [ALERTA] 2025-11-30 13:38:21 | Tipo: ACCIDENTE AUTOMATICO | Lugar: Ubicacion GPS Simulada | Usuario: Pablo Tercero (666-777-888) - Info: Ninguna alergia
 [ALERTA] 2026-01-06 19:56:25 | Tipo: ACCIDENTE AUTOMATICO | Lugar: Ubicacion GPS Simulada | Usuario: Default (000) - Info: Nada
+[ALERTA] 2026-05-19 19:25:46 | Tipo: SOS BOTÓN INTERFAZ | Lugar: Coordenadas GPS de Emergencia (UI) | Usuario: Pablo Tercero (666666666) - Info: Estabilidad médica estándar
+[ALERTA] 2026-05-19 19:34:41 | Tipo: SOS BOTÓN INTERFAZ | Lugar: Coordenadas GPS de Emergencia (UI) | Usuario: Pablo Tercero (666666666) - Info: Estabilidad médica estándar

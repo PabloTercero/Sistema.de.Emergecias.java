@@ -5,13 +5,14 @@ import com.google.gson.annotations.SerializedName;
 public class CentroSalud {
 
     // @SerializedName le dice a Gson: "Busca 'codigo' o 'Codigo' o 'CODIGO' en el JSON"
-    @SerializedName(value = "codigo", alternate = {"Codigo", "CODIGO", "id"})
+
+    @SerializedName(value = "codigo", alternate = {"Codigo", "CODIGO", "Código", "id"})
     private String codigo;
 
     @SerializedName(value = "nombre", alternate = {"Nombre", "NOMBRE", "centro", "Centro"})
     private String nombre;
 
-    @SerializedName(value = "direccion", alternate = {"Direccion", "DIRECCION"})
+    @SerializedName(value = "direccion", alternate = {"Direccion", "DIRECCION", "Dirección"})
     private String direccion;
 
     @SerializedName(value = "latitud", alternate = {"Latitud", "LATITUD", "lat"})

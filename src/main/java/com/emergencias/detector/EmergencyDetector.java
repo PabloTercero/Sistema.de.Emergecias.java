@@ -3,52 +3,51 @@ package com.emergencias.detector;
 import com.emergencias.model.EmergencyEvent;
 import com.emergencias.model.UserData;
 import java.util.Scanner;
-import java.util.Random; 
+import java.util.Random;
 
 public class EmergencyDetector {
 
-    // valor minimo para que salte la alarma automatica
-    private static final int UMBRAL = 5; 
+    // Umbral de activación automática parametrizado para simulación de impacto
+    private static final int UMBRAL_CRITICO = 5;
 
     public EmergencyEvent detectEvent(Scanner scanner, UserData usuario) {
-        System.out.println("\n--- Detector de Emergencias ---");
-        System.out.println("Elige modo: 'E' (Manual) o 'A' (Automatico)");
+        System.out.println("\n--- Módulo Detector de Contingencias ---");
+        System.out.println("Seleccione modalidad operativa: 'E' (Manual) o 'A' (Automatizada)");
         String opcion = scanner.nextLine().trim();
 
-        String tipo = "Desconocido";
-        String ubicacion = "Sin datos"; 
+        String tipo = "No definido";
+        String ubicacion = "Sin registros de telemetría";
 
         if (opcion.equalsIgnoreCase("E")) {
-            // modo manual, pedimos datos
-            System.out.print("Dime el tipo de emergencia: ");
+            // Entrada manual de datos por parte del operador del sistema
+            System.out.print("Introduzca tipo de contingencia: ");
             tipo = scanner.nextLine().trim();
-            System.out.print("Dime la ubicacion: ");
+            System.out.print("Introduzca coordenadas o ubicación actual: ");
             ubicacion = scanner.nextLine().trim();
 
         } else if (opcion.equalsIgnoreCase("A")) {
-            // simulamos un sensor con un random
-            int fuerza = new Random().nextInt(10) + 1; 
-            
-            if (fuerza >= UMBRAL) {
-                tipo = "ACCIDENTE AUTOMATICO";
-                ubicacion = "Ubicacion GPS Simulada";
-                System.out.println("GOLPE DETECTADO! Fuerza: " + fuerza);
+            // Simulación de lectura mediante sensor acelerómetro integrado en terminal móvil
+            int fuerzaImpacto = new Random().nextInt(10) + 1;
+            if (fuerzaImpacto >= UMBRAL_CRITICO) {
+                tipo = "ALERTA AUTOMÁTICA (ACELERÓMETRO)";
+                ubicacion = "Coordenadas GPS estimadas por dispositivo";
+                System.out.println("Impacto crítico detectado. Magnitud registrada: " + fuerzaImpacto);
             } else {
-                System.out.println("Golpe suave (" + fuerza + "). No activamos nada.");
-                return null; 
+                System.out.println("Variación de fuerza leve (" + fuerzaImpacto + "). Descartando activación del protocolo.");
+                return null;
             }
         } else {
-            System.out.println("Opcion no valida.");
+            System.out.println("Opción del sistema no válida.");
             return null;
         }
 
-        // confirmacion final por seguridad
-        System.out.print("Confirmar envio de ayuda? (S/N): ");
+        // Requerimiento de confirmación activa por motivos de seguridad operacional
+        System.out.print("¿Confirmar transmisión del paquete de rescate al 112? (S/N): ");
         if (scanner.nextLine().trim().equalsIgnoreCase("S")) {
             return new EmergencyEvent(tipo, ubicacion, usuario);
         }
-        
-        System.out.println("Cancelado por el usuario.");
+
+        System.out.println("Operación abortada por el usuario.");
         return null;
     }
 }

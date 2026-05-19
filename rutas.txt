@@ -1,3 +1,4 @@
-Ruta del Cares;Media;1.0;1
-Pico Mulhacén;Alta;5.0;1
+Ruta del Cares;Media;6.0;2
+Pico Mulhacén;Alta;10.0;2
 Sendero de los Sentidos;Baja;3.0;1
+Ruta Santa Pola;Media;0.0;0
