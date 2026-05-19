@@ -1,0 +1,31 @@
+/* Color de fondo de la ventana */
+.root {
+    -fx-background-color: #eaf2f8; /* Un azul cielo muy suave */
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* Estilo para el título principal */
+.label {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50; /* Azul oscuro elegante */
+}
+
+/* Estilo general para todos los botones */
+.button {
+    -fx-background-color: #27ae60; /* Verde montaña */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 25px; /* Bordes muy redondeados */
+    -fx-padding: 12px 20px;
+    -fx-pref-width: 260px; /* Todos los botones del mismo ancho */
+    -fx-cursor: hand; /* Que salga la manita al pasar por encima */
+}
+
+/* Efecto cuando el ratón pasa por encima del botón */
+.button:hover {
+    -fx-background-color: #2ecc71; /* Un verde más brillante */
+    -fx-scale-x: 1.05; /* Se hace un 5% más grande */
+    -fx-scale-y: 1.05;
+}
